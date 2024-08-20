@@ -1,0 +1,5 @@
+1) Import the project
+2) Run the following scripts with project directory as current directory in Terminal-
+  D:\AltSkeptics>npm init -y
+  D:\AltSkeptics>npm install express sqlite3 body-parser multer path
+  D:\AltSkeptics>node app.js
