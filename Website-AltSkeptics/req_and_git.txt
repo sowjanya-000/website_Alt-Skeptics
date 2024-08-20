@@ -1,0 +1,26 @@
+D:\AltSkeptics>npm init -y
+D:\AltSkeptics>npm install express sqlite3 body-parser multer path
+D:\AltSkeptics>node app.js
+
+
+
+
+
+
+Git CMD
+D:\folder_consisting_the_website_repo_that_has_to_be_pushed_as_whole>git init
+D:\folder_consisting_the_website_repo_that_has_to_be_pushed_as_whole>git add AltSkeptic
+D:\folder_consisting_the_website_repo_that_has_to_be_pushed_as_whole>git commit -m "Commiting Website AltSkeptics"
+D:\folder_consisting_the_website_repo_that_has_to_be_pushed_as_whole>git remote add origin https://github.com/sowjanya-000/Website-AltSkeptics.git
+D:\folder_consisting_the_website_repo_that_has_to_be_pushed_as_whole>git config --global user.email gedelasowjanya100@gmail.com
+D:\folder_consisting_the_website_repo_that_has_to_be_pushed_as_whole>git config --global user.name sowjanya-000
+D:\folder_consisting_the_website_repo_that_has_to_be_pushed_as_whole>git push -u origin main
+D:\folder_consisting_the_website_repo_that_has_to_be_pushed_as_whole>git push origin main
+
+
+
+//D:\folder_consisting_the_website_repo_that_has_to_be_pushed_as_whole>git push -u origin main username password
+//D:\folder_consisting_the_website_repo_that_has_to_be_pushed_as_whole>git push -u https://sowjanya-000:token_here@github.com/sowjanya-000/Website-AltSkeptics.git
+//remove the credentials from credentials manager for git , and run followin g set url and then run git push -u origin master that how you get credentials popup box
+git remote set-url origin https://username@github.com/username/repo-name.git
+//https://stackoverflow.com/questions/5335197/gits-famous-error-permission-to-git-denied-to-user

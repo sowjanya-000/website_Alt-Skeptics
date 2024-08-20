@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alt-Skeptics</title>
+    <!-- link to CSS-->
+     <link rel="stylesheet" href="/css/style.css" />
+     <!-- BOX ICONS-->
+     <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" 
+      rel="stylesheet"
+      
+      />
+</head>
+
+<body>
+
+<!--header-->
+
+<header>
+    <div class="nav container">
+          <!--logo--> 
+          <a href="/" class="logo">Alt<Span>Skeptics</Span></a>
+          <!--nav right-->
+          <div class="nav-right">
+              <a href="/admin" class="admin-btn"> <i class='bx bx-user'></i> </a>
+              <a href="/add" class ="write-btn"><i class='bx bx-pencil'></i>Write</a>      
+          </div>
+
+    </div>
+</header>
+
+<!--home-->
+
+<section class="home" id="home">
+    <div class="home-content">
+
+        <h2> Alt-Skeptics</h2>
+        <!--searchbox-->
+        <div class="search-box">
+            <i class="bx bx-search-alt"></i>
+            <input type="search" name="" id="" placeholder="Search"/>
+        </div>
+    </div>
+</section>
+
+<!-- Post Filter-->
+ <div class="post-filter container" id="post-filter">
+
+<!--
+    
+     <span class="filter-item active-filter" data-filter="all">All</span>
+     <span class="filter-item" data-filter="Astronomy">Astronomy</span>
+     <span class="filter-item" data-filter="AI">AI</span>
+     <span class="filter-item" data-filter="Theology">Phylosophy</span>
+     <span class="filter-item" data-filter="Data Science">Data Science</span>
+
+
+
+ <div class="post-filter container" id="post-filter">
+ -->
+<script>
+    const categories = ["All", "Astronomy", "AI", "Philosophy", "Data Science","General"];
+    const filterContainer = document.getElementById('post-filter');
+
+    categories.forEach(category => {
+        const filterItem = document.createElement('span');
+        filterItem.className = "filter-item" + (category === "All" ? " active-filter" : ""); // Set active class for "All"
+        filterItem.setAttribute("data-filter", category === "All" ? "all" : category);
+        filterItem.innerText = category;
+
+        // Add click event listener for filtering
+        filterItem.addEventListener("click", function() {
+            // Remove active class from all filter items
+            document.querySelectorAll('.filter-item').forEach(item => item.classList.remove('active-filter'));
+            // Add active class to the clicked filter item
+            this.classList.add('active-filter');
+        });
+
+        filterContainer.appendChild(filterItem);
+    });
+</script>
+
+ </div>
+
+
+
+<!--Posts-->
+<section class="posts container" id="posts">
+    <!--Posts will apear here-->
+</section>
+<!--Footer-->
+<div class="footer container">
+     <p>&#169;AltSkeptics</p>
+     <div class="social">
+        <a href="https://mail.google.com/"><i class='bx bxl-gmail'></i></a>
+        <a href="https://x.com/"><i class='bx bxl-twitter'></i></a>
+        <a href="https://github.com/sowjanya-000/website_Alt-Skeptics"><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/"><i class='bx bxl-linkedin'></i></a>
+
+    </div>
+</div>
+
+<!--using J query here- (link- https://releases.jquery.com/ )--
+//https://boxicons.com/?query=email
+-->
+<script src="https://code.jquery.com/jquery-3.7.1.js" 
+integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+crossorigin="anonymous">
+</script>
+
+<!--Link to JS -->
+<script src="/js/main.js"></script>
+<script>
+    //Filter JS
+    $(document).ready(function(){
+        $(".filter-item").click(function(){
+           const value=$(this).attr("data-filter");
+           if(value=="all"){
+             $(".post").show("1000");
+           }else {
+            $(".post")
+            .not("."+value)
+            .hide("1000");
+            $(".post")
+            .filter("."+value)
+            .show("1000");
+           }
+        }); 
+
+        //Active Button
+        $(".filter-item").click(function(){
+            $(this)
+            .addClass("active-filter")
+            .siblings()
+            .removeClass("active-filter");
+        });
+    });
+</script>
+
+
+</body>
+
+</html>
