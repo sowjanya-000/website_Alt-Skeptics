@@ -1,12 +1,60 @@
-# website_Alt-Skeptics
-Blog/Article posting Website
+# **Alt-Skeptics**
 
-======================================================================================
-1) Import the project
-2) Run the following scripts with project directory as current directory in Terminal-
-  D:\AltSkeptics>npm init -y
-  D:\AltSkeptics>npm install express sqlite3 body-parser multer path
-  D:\AltSkeptics>node app.js
+**Alt-Skeptics** is a blog and article posting website where users can easily post, manage, and filter articles based on various categories. Built using HTML, CSS, and JavaScript, with data stored in SQLite3, this platform is designed for a seamless and interactive blogging experience.
+
+## **Project Setup**
+
+To get started with the project, follow these steps:
+
+1. **Import the Project**
+
+   Clone or download the project files into your desired directory.
+
+2. **Install Required Dependencies**
+
+   Open your terminal and navigate to the project directory:
+
+   ```sh
+   D:\AltSkeptics>npm init -y
+   D:\AltSkeptics>npm install express sqlite3 body-parser multer path
+   ```
+
+3. **Run the Project**
+
+   Once dependencies are installed, start the server by running:
+
+   ```sh
+   D:\AltSkeptics>node app.js
+   ```
+
+## **Website Overview**
+
+### **Home/Landing Page**
+
+The home page displays all the posts and articles based on the selected filters. By default, the page shows all articles, but users can apply filters by category to view specific content. The search box at the top allows users to search articles using keywords.
+
+- **Filter by Category:** The filter is set based on the category chosen when the article was posted.
+  
+- **Interactive Hover Effects:** Hovering over post tiles enhances interactivity, making the user experience more engaging.
+
+- **Viewing Articles:** Users can click on the title of the article or the "Read More" link to view the full content of any post.
+
+### **Writing a Post**
+
+Clicking on the "Write" option in the header navigates users to the post creation page. Here, users can:
+
+- **Add a Title, Category, Content, and Image:** The text editor supports formatting, font customization, headings, alignments, and more.
+
+- **Post Submission:** After submitting the post, users are redirected to the home page, where their new post appears at the top of the list.
+
+### **Admin Central**
+
+The Admin Central allows users to manage existing posts:
+
+- **Delete Posts:** Admins can delete posts directly from the interface.
+  
+- **Access:** Admin Central is accessible via the admin symbol
+
 ======================================================================================
 
 
